@@ -1,9 +1,9 @@
 import java.util.TreeMap;
 
 public class BatimentOutil extends Batiment {
-    private Outil typeOutil;
+    private String typeOutil;
 
-    public BatimentOutil(TreeMap<Ressource, Integer> coutProduction, int intervelleProduction, Outil typeOutil) {
+    public BatimentOutil(TreeMap<Ressource, Integer> coutProduction, int intervelleProduction, String typeOutil) {
         super(coutProduction, intervelleProduction);
         this.typeOutil = typeOutil;
     }
@@ -12,11 +12,11 @@ public class BatimentOutil extends Batiment {
      * getter et setter
      */
 
-    public Outil getTypeOutil() {
+    public String getTypeOutil() {
         return typeOutil;
     }
 
-    public void setTypeOutil(Outil typeOutil) {
+    public void setTypeOutil(String typeOutil) {
         this.typeOutil = typeOutil;
     }
 }

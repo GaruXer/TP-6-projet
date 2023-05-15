@@ -1,7 +1,7 @@
 import java.util.Map;
 import java.util.TreeMap;
 
-public abstract class Batiment {
+public class Batiment {
     private Map<Ressource, Integer> coutProduction;
     private int intervelleProduction;
 
@@ -9,7 +9,6 @@ public abstract class Batiment {
         this.coutProduction = coutProduction;
         this.intervelleProduction = intervelleProduction;
     }
-
 
     /**
      * getter et setter

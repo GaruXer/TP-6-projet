@@ -1,9 +1,9 @@
 import java.util.TreeMap;
 
 public class BatimentProduction extends Batiment {
-    private Unite typeUnite;
+    private String typeUnite;
 
-    public BatimentProduction(TreeMap<Ressource, Integer> coutProduction, int intervelleProduction, Unite typeUnite) {
+    public BatimentProduction(TreeMap<Ressource, Integer> coutProduction, int intervelleProduction, String typeUnite) {
         super(coutProduction, intervelleProduction);
         this.typeUnite = typeUnite;
     }
@@ -12,11 +12,11 @@ public class BatimentProduction extends Batiment {
      * getter et setter
      */
 
-    public Unite getTypeUnite() {
+    public String getTypeUnite() {
         return typeUnite;
     }
 
-    public void setTypeUnite(Unite typeUnite) {
+    public void setTypeUnite(String typeUnite) {
         this.typeUnite = typeUnite;
     }
 }
