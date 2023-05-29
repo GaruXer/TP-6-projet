@@ -6,7 +6,7 @@ public class UniteExperte extends Unite {
     protected int tourSansNourriture;
 
     public UniteExperte(Unite unite) {
-        super(unite.type, unite.positionX, unite.positionY, unite.vitesse + 2, unite.coutNourriture * 2, unite.jaugeExperience);
+        super(unite.type, unite.positionX, unite.positionY, unite.vitesse + 2, unite.coutNourriture * 2);
         this.unite = unite;
         this.tourSansNourriture = 0;
     }
