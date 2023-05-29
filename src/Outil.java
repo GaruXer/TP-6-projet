@@ -1,9 +1,9 @@
 public class Outil {
-    private String nom;
+    private Ressource type;
     private int niveau;
 
-    public Outil(String nom, int niveau) {
-        this.nom = nom;
+    public Outil(Ressource type, int niveau) {
+        this.type = type;
         this.niveau = niveau;
     }
 
@@ -11,12 +11,12 @@ public class Outil {
      * getter et setter
      */
 
-    public String getNom() {
-        return nom;
+    public Ressource getType() {
+        return type;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setType(Ressource type) {
+        this.type = type;
     }
 
     public int getNiveau() {

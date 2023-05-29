@@ -1,7 +1,7 @@
 import java.util.Map;
 
 public class Unite {
-    protected String type;
+    protected Ressource type;
     protected int positionX;
     protected int positionY;
     protected double vitesse;
@@ -9,13 +9,13 @@ public class Unite {
     protected Outil outil;
     protected int jaugeExperience;
 
-    public Unite(String type, int positionX, int positionY, double vitesse, int coutNourriture, Outil outil, int jaugeExperience) {
+    public Unite(Ressource type, int positionX, int positionY, double vitesse, int coutNourriture, int jaugeExperience) {
         this.type = type;
         this.positionX = positionX;
         this.positionY = positionY;
         this.vitesse = vitesse;
         this.coutNourriture = coutNourriture;
-        this.outil = outil;
+        this.outil = new Outil(type, 1);
         this.jaugeExperience = jaugeExperience;
     }
 
@@ -23,11 +23,11 @@ public class Unite {
      * getter et setter
      */
 
-    public String getType() {
+    public Ressource getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Ressource type) {
         this.type = type;
     }
 
