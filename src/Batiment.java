@@ -6,10 +6,14 @@ public class Batiment {
     protected Map<Ressource, Integer> coutProduction;
     protected int intervelleProduction;
 
-    public Batiment(Ressource type, TreeMap<Ressource, Integer> coutProduction, int intervelleProduction) {
+    public Batiment(Ressource type) {
         this.type = type;
-        this.coutProduction = coutProduction;
-        this.intervelleProduction = intervelleProduction;
+        this.coutProduction = new TreeMap<>();
+        coutProduction.put(Ressource.BOIS, 5);
+        coutProduction.put(Ressource.PIERRE, 5);
+        coutProduction.put(Ressource.OR, 5);
+        coutProduction.put(Ressource.NOURRITURE, 5);
+        this.intervelleProduction = 3;
     }
 
     /**

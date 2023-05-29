@@ -2,8 +2,8 @@ import java.util.List;
 import java.util.TreeMap;
 
 public class BatimentOutil extends Batiment {
-    public BatimentOutil(Ressource type, TreeMap<Ressource, Integer> coutProduction, int intervelleProduction) {
-        super(type, coutProduction, intervelleProduction);
+    public BatimentOutil(Ressource type) {
+        super(type);
     }
 
     /**

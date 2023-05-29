@@ -9,14 +9,14 @@ public class Unite {
     protected Outil outil;
     protected int jaugeExperience;
 
-    public Unite(Ressource type, int positionX, int positionY, double vitesse, int coutNourriture, int jaugeExperience) {
+    public Unite(Ressource type, int positionX, int positionY, double vitesse, int coutNourriture) {
         this.type = type;
         this.positionX = positionX;
         this.positionY = positionY;
         this.vitesse = vitesse;
         this.coutNourriture = coutNourriture;
         this.outil = new Outil(type, 1);
-        this.jaugeExperience = jaugeExperience;
+        this.jaugeExperience = 0;
     }
 
     /**
