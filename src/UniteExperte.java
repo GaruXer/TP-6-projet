@@ -35,7 +35,17 @@ public class UniteExperte extends Unite {
      * methodes
      */
 
-    public void redevenirUnite() {
+    @Override
+    public void recolter(Joueur joueur, Case aCase) {
+        int nbRessourceCoffre = joueur.getCoffre().get(this.type);
+        int nbRessourceCase = aCase.getRessource().get(this.type);
 
+        if (nbRessourceCase > 0 && nbRessourceCase > this.outil.getNiveau() * 2) {
+            joueur.getCoffre().replace(this.type, nbRessourceCoffre + this.outil.getNiveau() * 2);
+            aCase.getRessource().replace(this.type, nbRessourceCase - this.outil.getNiveau() * 2);
+        } else {
+            joueur.getCoffre().replace(this.type, nbRessourceCoffre + nbRessourceCase);
+            aCase.getRessource().replace(this.type, 0);
+        }
     }
 }

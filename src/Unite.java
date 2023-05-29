@@ -90,4 +90,17 @@ public class Unite {
     public UniteMontee devenirUniteMontee() {
         return new UniteMontee(this);
     }
+
+    public void recolter(Joueur joueur, Case aCase) {
+        int nbRessourceCoffre = joueur.getCoffre().get(this.type);
+        int nbRessourceCase = aCase.getRessource().get(this.type);
+
+        if (nbRessourceCase > 0 && nbRessourceCase > this.outil.getNiveau()) {
+            joueur.getCoffre().replace(this.type, nbRessourceCoffre + this.outil.getNiveau());
+            aCase.getRessource().replace(this.type, nbRessourceCase - this.outil.getNiveau());
+        } else {
+            joueur.getCoffre().replace(this.type, nbRessourceCoffre + nbRessourceCase);
+            aCase.getRessource().replace(this.type, 0);
+        }
+    }
 }
