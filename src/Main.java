@@ -8,7 +8,7 @@ public class Main {
     }
 
     public static CarteDuJeu creerCarte(int taille) {
-        List<Case> l_cases = new ArrayList<>();
+        ArrayList<Case> l_cases = new ArrayList<>();
 
         for (int x = 0; x < taille; x++) {
             for (int y = 0; y < taille; y++) {

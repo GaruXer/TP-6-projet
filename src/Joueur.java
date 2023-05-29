@@ -4,17 +4,18 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Joueur {
+    private int nbRessourceDepart;
     private Map<Ressource, Integer> coffre;
-    private List<Unite> l_unites;
+    private ArrayList<Unite> l_unites;
     private ArrayList<BatimentOutil> l_batimentsOutil;
     private ArrayList<BatimentProduction> l_batimentsProduction;
 
     public Joueur() {
         this.coffre = new TreeMap<>();
-        coffre.put(Ressource.BOIS, 20);
-        coffre.put(Ressource.PIERRE, 20);
-        coffre.put(Ressource.OR, 20);
-        coffre.put(Ressource.NOURRITURE, 20);
+        coffre.put(Ressource.BOIS, this.nbRessourceDepart);
+        coffre.put(Ressource.PIERRE, this.nbRessourceDepart);
+        coffre.put(Ressource.OR, this.nbRessourceDepart);
+        coffre.put(Ressource.NOURRITURE, this.nbRessourceDepart);
 
         this.l_unites = new ArrayList<>();
     }
@@ -22,6 +23,14 @@ public class Joueur {
     /**
      * getter et setter
      */
+
+    public int getNbRessourceDepart() {
+        return nbRessourceDepart;
+    }
+
+    public void setNbRessourceDepart(int nbRessourceDepart) {
+        this.nbRessourceDepart = nbRessourceDepart;
+    }
 
     public Map<Ressource, Integer> getCoffre() {
         return coffre;
@@ -35,7 +44,7 @@ public class Joueur {
         return l_unites;
     }
 
-    public void setUnites(List<Unite> l_unites) {
+    public void setUnites(ArrayList<Unite> l_unites) {
         this.l_unites = l_unites;
     }
 
@@ -54,8 +63,4 @@ public class Joueur {
     public void setBatimentsProduction(ArrayList<BatimentProduction> l_batimentsProduction) {
         this.l_batimentsProduction = l_batimentsProduction;
     }
-
-    /**
-     * methodes
-     */
 }
