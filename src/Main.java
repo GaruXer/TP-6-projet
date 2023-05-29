@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Joueur joueur = new Joueur();
         CarteDuJeu carteDuJeu = creerCarte(15);
+        int nbTourDeJeu = 0;
     }
 
     public static CarteDuJeu creerCarte(int taille) {

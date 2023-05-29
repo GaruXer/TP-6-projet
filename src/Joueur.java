@@ -5,8 +5,9 @@ import java.util.TreeMap;
 
 public class Joueur {
     private Map<Ressource, Integer> coffre;
-
     private List<Unite> l_unites;
+    private ArrayList<BatimentOutil> l_batimentsOutil;
+    private ArrayList<BatimentProduction> l_batimentsProduction;
 
     public Joueur() {
         this.coffre = new TreeMap<>();
@@ -36,6 +37,22 @@ public class Joueur {
 
     public void setUnites(List<Unite> l_unites) {
         this.l_unites = l_unites;
+    }
+
+    public ArrayList<BatimentOutil> getBatimentsOutil() {
+        return l_batimentsOutil;
+    }
+
+    public void setBatimentsOutil(ArrayList<BatimentOutil> l_batimentsOutil) {
+        this.l_batimentsOutil = l_batimentsOutil;
+    }
+
+    public ArrayList<BatimentProduction> getBatimentsProduction() {
+        return l_batimentsProduction;
+    }
+
+    public void setBatimentsProduction(ArrayList<BatimentProduction> l_batimentsProduction) {
+        this.l_batimentsProduction = l_batimentsProduction;
     }
 
     /**

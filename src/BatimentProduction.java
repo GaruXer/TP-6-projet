@@ -2,23 +2,8 @@ import java.util.List;
 import java.util.TreeMap;
 
 public class BatimentProduction extends Batiment {
-    private Ressource type;
-
-    public BatimentProduction(TreeMap<Ressource, Integer> coutProduction, int intervelleProduction, Ressource type) {
-        super(coutProduction, intervelleProduction);
-        this.type = type;
-    }
-
-    /**
-     * getter et setter
-     */
-
-    public Ressource getType() {
-        return type;
-    }
-
-    public void setType(Ressource type) {
-        this.type = type;
+    public BatimentProduction(Ressource type, TreeMap<Ressource, Integer> coutProduction, int intervelleProduction) {
+        super(type, coutProduction, intervelleProduction);
     }
 
     /**
