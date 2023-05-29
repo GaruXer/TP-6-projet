@@ -31,11 +31,11 @@ public class CarteDuJeu {
         this.tailleY = tailleY;
     }
 
-    public List<Case> getL_cases() {
+    public List<Case> geCases() {
         return l_cases;
     }
 
-    public void setL_cases(List<Case> l_cases) {
+    public void setCases(List<Case> l_cases) {
         this.l_cases = l_cases;
     }
 }
