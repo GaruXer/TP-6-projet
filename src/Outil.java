@@ -26,4 +26,12 @@ public class Outil {
     public void setNiveau(int niveau) {
         this.niveau = niveau;
     }
+
+    /**
+     * methodes
+     */
+
+    public void augmenterNiveau() {
+        this.niveau++;
+    }
 }

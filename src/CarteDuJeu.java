@@ -3,12 +3,12 @@ import java.util.List;
 public class CarteDuJeu {
     private int tailleX;
     private int tailleY;
-    private List<Case> cases;
+    private List<Case> l_cases;
 
-    public CarteDuJeu(int tailleX, int tailleY, List<Case> cases) {
+    public CarteDuJeu(int tailleX, int tailleY, List<Case> l_cases) {
         this.tailleX = tailleX;
         this.tailleY = tailleY;
-        this.cases = cases;
+        this.l_cases = l_cases;
     }
 
     /**
@@ -31,11 +31,11 @@ public class CarteDuJeu {
         this.tailleY = tailleY;
     }
 
-    public List<Case> getCases() {
-        return cases;
+    public List<Case> getL_cases() {
+        return l_cases;
     }
 
-    public void setCases(List<Case> cases) {
-        this.cases = cases;
+    public void setL_cases(List<Case> l_cases) {
+        this.l_cases = l_cases;
     }
 }

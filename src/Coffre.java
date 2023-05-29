@@ -12,6 +12,10 @@ public class Coffre {
         coffre.put(Ressource.NOURRITURE, 20);
     }
 
+    /**
+     * getter et setter
+     */
+
     public Map<Ressource, Integer> getCoffre() {
         return coffre;
     }

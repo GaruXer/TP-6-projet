@@ -1,15 +1,15 @@
 import java.util.Map;
 
 public class Unite {
-    private String type;
-    private int positionX;
-    private int positionY;
-    private int vitesse;
-    private int coutNourriture;
-    private Outil outil;
-    private int jaugeExperience;
+    protected String type;
+    protected int positionX;
+    protected int positionY;
+    protected double vitesse;
+    protected int coutNourriture;
+    protected Outil outil;
+    protected int jaugeExperience;
 
-    public Unite(String type, int positionX, int positionY, int vitesse, int coutNourriture, Outil outil, int jaugeExperience) {
+    public Unite(String type, int positionX, int positionY, double vitesse, int coutNourriture, Outil outil, int jaugeExperience) {
         this.type = type;
         this.positionX = positionX;
         this.positionY = positionY;
@@ -47,11 +47,11 @@ public class Unite {
         this.positionY = positionY;
     }
 
-    public int getVitesse() {
+    public double getVitesse() {
         return vitesse;
     }
 
-    public void setVitesse(int vitesse) {
+    public void setVitesse(double vitesse) {
         this.vitesse = vitesse;
     }
 
@@ -77,5 +77,17 @@ public class Unite {
 
     public void setJaugeExperience(int jaugeExperience) {
         this.jaugeExperience = jaugeExperience;
+    }
+
+    /**
+     * methodes
+     */
+
+    public UniteExperte devenirUniteExperte() {
+        return new UniteExperte(this);
+    }
+
+    public UniteMontee devenirUniteMontee() {
+        return new UniteMontee(this);
     }
 }

@@ -1,7 +1,10 @@
 import java.util.Map;
 
 public class UniteExperte extends Unite {
-    public UniteExperte(String type, int positionX, int positionY, int vitesse, int coutNourriture, Outil outil, int jaugeExperience) {
-        super(type, positionX, positionY, vitesse, coutNourriture, outil, jaugeExperience);
+    protected Unite unite;
+
+    public UniteExperte(Unite unite) {
+        super(unite.type, unite.positionX, unite.positionY, unite.vitesse + 2, unite.coutNourriture * 2, unite.outil, unite.jaugeExperience);
+        this.unite = unite;
     }
 }
