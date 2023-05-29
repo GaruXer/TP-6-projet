@@ -22,8 +22,9 @@ public class Main {
     private static void tourDeJeu() {
         nbTourDeJeu++;
 
-        // fonction pour produire avec les batiments;
-        // fonction pour récolter les ressources;
+        productionBatiment();
+        recolteUnite();
+        // fonction pour le déplacement des unités
 
         creerUnite();
         creerBatiment();
@@ -53,6 +54,31 @@ public class Main {
         return new CarteDuJeu(taille, taille, l_cases);
     }
 
+    private static void productionBatiment() {
+        for (BatimentProduction batiment : joueur.getBatimentsProduction()) {
+            batiment.produire(joueur);
+        }
+
+        for (BatimentOutil batiment : joueur.getBatimentsOutil()) {
+            batiment.produire(joueur);
+        }
+    }
+
+    private static void recolteUnite() {
+        for (Unite unite : joueur.getUnites()) {
+            unite.recolter(joueur, getCaseDeUnite(unite));
+        }
+    }
+
+    private static Case getCaseDeUnite(Unite unite) {
+        for (Case aCase : carteDuJeu.getCases()) {
+            if (aCase.getPositionX() == unite.positionX && aCase.getPositionY() == unite.positionY) {
+                return aCase;
+            }
+        }
+        return null;
+    }
+    
     private static void creerUnite() {
         Scanner scanner = new Scanner(System.in);
         String reponse = "";

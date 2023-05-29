@@ -32,7 +32,7 @@ public class CarteDuJeu {
         this.tailleY = tailleY;
     }
 
-    public ArrayList<Case> geCases() {
+    public ArrayList<Case> getCases() {
         return l_cases;
     }
 
